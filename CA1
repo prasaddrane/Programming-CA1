@@ -9,22 +9,43 @@ student_data = [('00000020','Prasad', 'CSITMSC'),
 
 #student_number.sort()
 #print(student_number)
-print(student_data)
+#print(student_data)
 
-def qsort(student_data):
-    if len(student_data) == 0:
-        return []
+#def qsort(student_data):
+ #   if len(student_data) == 0:
+  #      return []
+   # else:
+    #    pivot = student_data[0]
+     #   lesser = qsort[(x for x in student_data[1:] if x < pivot)]
+      #  greater = qsort[(x for x in student_data[1:] if x >= pivot)]
+       # print(lesser + [pivot] + greater)
+        
+def quick_sort(sequence):
+    length = len(sequence)
+    if length <= 1:
+        return sequence
     else:
-        pivot = student_data[0]
-        lesser = qsort[(x for x in student_data[1:] if x < pivot)]
-        greater = qsort[(x for x in student_data[1:] if x >= pivot)]
-        return lesser + [pivot] + greater
-    
+        pivot = sequence.pop()
+        
+        
+    greater = []
+    lower = []
+        
+    for item in sequence:
+        if item > pivot:
+            greater.append(item)
+        else:
+            if item < pivot:
+                lower.append(item)
+    return quick_sort(lower) + [pivot] + quick_sort(greater)
+print(quick_sort(student_data))
 
-def register_student(self_number,student,course):
-    bisect.insort(student_data,('0000023', 'Harshad', 'CSTMPT'))
-    print(student_data)
+#print(quick_sort(student_data))
+
+#def register_student(self_number,student,course):
+ #   bisect.insort(student_data,('0000023', 'Harshad', 'CSTMPT'))
+  #  print(student_data)
     
-def retrive():
-    student_data.sort()
-    print(student_data[0])
+#def retrive():
+ #   student_data.sort()
+  #  print(student_data[0])
