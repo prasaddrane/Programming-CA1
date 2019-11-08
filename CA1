@@ -5,6 +5,7 @@ student_data = [('00000020','Prasad', 'CSITMSC'),
                 ('00000028', 'Abhishek', 'CSBADIP'),
                 ('00000027', 'Saurabh', 'CSBADIP'),
                 ('00000024', 'Golu', 'CSBADPI')]
+
 #student_name = ['Prasad', 'Akash', 'Paul', 'Abhishek', 'Saurabh']
 #student_course_code = ['CSITMSC', 'CSITDIP', 'CSBAMSC', 'CSBADIP']
 
@@ -43,9 +44,11 @@ print(quick_sort(student_data))
 
 #print(quick_sort(student_data))
 
-#def register_student(self_number,student,course):
- #   bisect.insort(student_data,('0000023', 'Harshad', 'CSTMPT'))
-  #  print(student_data)
+def register_student(sequence):
+    student_data.append(sequence)
+    print("Student Data Before Sorting : "+str(student_data))
+    student_updated_data = quick_sort(student_data)
+    print("Student data after Sorting : "+ str(student_updated_data))
     
 def retrive():
     quick_sort(student_data)
