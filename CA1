@@ -6,6 +6,7 @@ student_data = [('00000020','Prasad', 'CSITMSC'),
                 ('00000027', 'Saurabh', 'CSBADIP'),
                 ('00000024', 'Golu', 'CSBADPI')]
 student_updated_data = []
+student_copy_data = []
 #student_name = ['Prasad', 'Akash', 'Paul', 'Abhishek', 'Saurabh']
 #student_course_code = ['CSITMSC', 'CSITDIP', 'CSBAMSC', 'CSBADIP']
 
@@ -45,11 +46,13 @@ print(quick_sort(student_data))
 #print(quick_sort(student_data))
 
 def register_student(sequence):
+    global student_copy_data
     global student_updated_data
-    global student_data
+    #global student_data
     student_data.append(sequence)
+    student_copy_data = student_data.copy()
     print("Student Data Before Sorting : "+str(student_data))
-    student_updated_data = quick_sort(student_data)
+    student_updated_data = quick_sort(student_copy_data)
     print("Student data after Sorting : "+ str(student_updated_data))
     
 def retrive():
