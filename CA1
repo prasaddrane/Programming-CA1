@@ -1,4 +1,4 @@
-import bisect
+
 student_data = [('00000020','Prasad', 'CSITMSC'), 
                 ('00000021','Akash', 'CSITDIP'), 
                 ('00000025','Paul', 'CSBAMSC'), 
@@ -69,6 +69,7 @@ eg. retrive()
 
 Repository Link : https://github.com/prasaddrane/Programming-CA1/blob/master/CA1
 
+I have used Quick Sort as internal Sorting algorithm for this CA
 
 '''
     
