@@ -46,6 +46,7 @@ print(quick_sort(student_data))
 
 def register_student(sequence):
     global student_updated_data
+    global student_data
     student_data.append(sequence)
     print("Student Data Before Sorting : "+str(student_data))
     student_updated_data = quick_sort(student_data)
@@ -56,5 +57,13 @@ def retrive():
     print(student_updated_data[0])
     del student_updated_data[0]
     print(student_updated_data)
+    
+'''
+1. To run the register_student function follow the below syntax to pass the student data
+eg. register_student(('00000022', 'Ketan', 'CSTMIPL'))
+2. To run retrive function follow below syntax
+eg. retrive()
+
+'''
     
     
